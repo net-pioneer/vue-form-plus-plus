@@ -62,7 +62,7 @@ export default function useFormValidation(form:PayloadInterface) {
         text:i18n.global.t('validation.REQUIRED')
       }
     }
-    else if (decorator.name === 'MIN' && input.length < decorator.value) {
+    else if (decorator.name === 'MIN' && (input !== undefined && input.length < decorator.value)) {
       return {
         _decorator:decorator,
         fieldName:formFieldName,
