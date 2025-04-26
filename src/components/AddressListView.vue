@@ -42,9 +42,6 @@ import XView from "@/components/el/x-view.vue";
 const http = SrvRequest();
 const addresses = ref();
 const apiAddressList = await http.signedGet<AddressData[]>('/karfarmas/address');
-if(apiAddressList.ok){
-  addresses.value = apiAddressList.data;
-}
 console.log(apiAddressList);
 </script>
 

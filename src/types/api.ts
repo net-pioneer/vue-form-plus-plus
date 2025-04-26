@@ -1,7 +1,4 @@
-export interface GenericApiResult<T>{
-  data:T
-  ok:boolean;
-}
+export type GenericApiResult<T> = T;
 export interface AddressData {
   id: string;
   address_id: string;
