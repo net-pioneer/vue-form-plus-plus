@@ -40,9 +40,9 @@ import ContentBox from "@/components/ContentBox.vue";
 import { ref } from "vue";
 import XView from "@/components/el/x-view.vue";
 const http = SrvRequest();
-const addresses = ref();
-const apiAddressList = await http.signedGet<AddressData[]>('/karfarmas/address');
-console.log(apiAddressList);
+//const addresses = ref();
+const addresses = await http.signedGet<AddressData[]>('/karfarmas/address');
+console.log(addresses);
 </script>
 
 <style scoped>
