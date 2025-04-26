@@ -55,6 +55,9 @@ export default {
         select_required:'باید نقطه ای در نقشه انتخاب کنید'
     },
     submit:{
+        btn_label:'ثبت و ادامه',
         submitted:'آدرس با موفقیت ثبت شد'
-    }
+    },
+    list:"لیست",
+    please_wait:'صبر کنید'
 }

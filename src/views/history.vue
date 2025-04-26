@@ -4,7 +4,7 @@
       <template #fallback>
         <content-box>
           <template #header>
-            صبر کنید
+            {{$t('please_wait')}}
           </template>
         </content-box>
       </template>

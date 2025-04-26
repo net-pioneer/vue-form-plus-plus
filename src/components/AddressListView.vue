@@ -2,7 +2,7 @@
   <div>
     <content-box>
       <template #header>
-        لبست
+        {{ $t('list') }}
       </template>
     </content-box>
     <content-box  v-for="address in addresses" :key="address.id">

@@ -32,7 +32,7 @@
                  <x-select selectid="female" v-model:field="payload.gender"/>
                  <x-select selectid="male" v-model:field="payload.gender"/>
                </div>
-               <span>جنسیت</span>
+               <span>{{ $t('form.gender.label') }}</span>
              </div>
            </div>
          </div>
@@ -45,7 +45,7 @@
     <div class="button-container">
       <button @click="submit" :disabled="loading">
         <img src="/images/loading.gif" v-if="loading"/>
-        <span v-else>ثبت و ادامه</span>
+        <span v-else>{{$t('submit.btn_label')}}</span>
       </button>
     </div>
   </div>
