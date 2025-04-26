@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use '../abstract/values' as *;
+.x-view {
+  & > div {
+    &:first-child {
+      color: $gray-color;
+      font-size: map.get($fonts-sizes, 14);
+      font-weight: 400;
+    }
+    &:last-child {
+      color: #37474F;
+      font-size: map.get($fonts-sizes, 16);
+      font-weight: 700;
+      margin-top: 15px;
+    }
+  }
+}

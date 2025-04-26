@@ -1,0 +1,38 @@
+@use '../abstract/values.scss';
+.custom-radio {
+    cursor: pointer;
+}
+.custom-radio input[type="radio"] {
+    display: none;
+}
+.custom-radio label {
+    position: relative;
+    padding-left: 30px; /* Space for the custom radio button */
+    user-select: none;
+    cursor: pointer;
+}
+
+.custom-radio label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid values.$primary-color;
+    border-radius: 50%;
+    background-color: white;
+    box-sizing: border-box;
+}
+.custom-radio input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: values.$primary-color;
+    border-radius: 50%;
+}

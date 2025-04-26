@@ -1,0 +1,53 @@
+@use '../abstract/values.scss';
+.contentbox{
+  width: 55%;
+  min-width: 55%;
+  margin: 50px auto;
+  text-align: end;
+  border-radius: 4px;
+  border: 1px solid values.$border-color;
+  & > .header{
+    margin-bottom:10px;
+    direction:rtl;
+    text-align:start;
+    ::v-deep(a,label) {
+      font-size: map-get(values.$fonts-sizes,16);
+      line-height: 32px;
+      font-weight: 400;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  & > .body{
+    background-color:values.$content-color;
+    color:black;
+    //min-height: 370px;
+    padding-top: 20px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    box-shadow: 0px 0px 16px 0px #00000014;
+    min-height: auto;
+    padding-bottom: 20px;
+    &::v-deep(.view-block){
+      padding-top: 25px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 25px;
+    }
+  }
+  @include values.sm{
+    width: 90%;
+    padding:0;
+    margin: 10px auto;
+    margin-bottom: 100px;
+    & > .body{
+      padding: 25px;
+    }
+  }
+}
+.no-slot{
+  margin-bottom: -60px;
+}

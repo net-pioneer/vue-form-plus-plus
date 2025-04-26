@@ -1,0 +1,39 @@
+@use "sass:map";
+$content-color:#ffffff;
+$color-sec:#F0F0F0;
+$text-color:#37474F;
+$primary-color:#00BFA5;
+$primary-color-hover: #039682;
+$border-color:#EDF0F2;
+$gray-color:#757575;
+$fonts-sizes:(
+        14 : 14px,
+        16 : 16px,
+);
+$display-breakpoints: (
+        xs: 0,
+        sm: 640px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1280px,
+        xxl: 1904px,
+        xxxl: 2100px
+);
+
+@mixin sm {
+  @media screen and (max-width: map.get($display-breakpoints, 'sm') ) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map.get($display-breakpoints, 'sm') ) {
+    @content;
+  }
+}
+@include sm{
+  $fonts-sizes:(
+          14 : 12px,
+          16 : 14px,
+  )!global;
+}

@@ -1,0 +1,40 @@
+@use '../abstract/values.scss';
+header{
+  max-height: 75px;
+  height: 75px;
+  background-color: values.$content-color;
+  box-shadow: 0px 0.5px 2px 0px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & p{
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .menu{
+    display: flex;
+    gap: 25%;
+    & a{
+      text-align: center;
+      flex:1;
+      width: max-content;
+      white-space: nowrap;
+      font-size: map-get(values.$fonts-sizes,14);
+      color:values.$text-color;
+      text-decoration: none;
+      font-weight: 700;
+      &:hover{
+        color:values.$primary-color;
+      }
+    }
+  }
+  @include values.sm{
+    .menu{
+      gap: 15px;
+    }
+  }
+}

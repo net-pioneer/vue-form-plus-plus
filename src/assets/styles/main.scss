@@ -1,0 +1,117 @@
+@use './abstract/fonts.scss';
+@use './abstract/values.scss';
+*{
+  font-family: 'Vazir' !important;
+  padding:0;
+  margin:0;
+}
+body{
+  background-color: values.$color-sec;
+}
+.mt-form{
+  margin-top: 1rem;
+}
+.space-form{
+  margin-top: 30px;
+}
+.flex-line{
+  display: flex;
+  justify-content: space-between;
+}
+.gap-10{
+  gap:10px;
+}
+.mt-select{
+  margin-top: 50px;
+}
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex-direction: row-reverse;
+}
+
+.col {
+  flex: 1;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  box-sizing: border-box;
+}
+
+.col-4 {
+  flex: 0 0 33.33%;
+}
+
+.col-8 {
+  flex: 0 0 66.66%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+}
+
+/* Tablet screens (min-width: 768px) */
+@media (max-width: 768px) {
+  .col-6 {
+    flex: 0 0 100%;  /* 6 columns = 50% */
+  }
+  .col-4 {
+    flex: 0 0 100%;  /* 4 columns = 33.33% */
+  }
+  .col-8 {
+    flex: 0 0 100%;  /* 8 columns = 66.66% */
+  }
+  .col-12 {
+    flex: 0 0 100%;  /* 12 columns = full width */
+  }
+}
+.button-container{
+  max-height: 75px;
+  height: 75px;
+  background-color: values.$content-color;
+  box-shadow: 0px 0.5px 2px 0px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & button{
+    width: 225px;
+    height: 45px;
+    color:white;
+    font-weight: 700;
+    border-radius: 4px;
+    background-color: values.$primary-color;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: map-get(values.$fonts-sizes,16);
+    &:hover{
+      background-color: values.$primary-color-hover;
+    }
+    img{
+      width: 50px;
+    }
+  }
+}
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(5px);
+  -webkit-transform:translateX(5px);
+}
+
+.list-leave-active {
+  //position: absolute;
+}
