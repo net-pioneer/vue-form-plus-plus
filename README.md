@@ -8,6 +8,7 @@
 - Vue3 Composition APi
 - Without Using Any External Library
 - Pure Scss
+- OOP (Object-Oriented)
 
 # Note 
 This Version IS Compatible with vue3 and nuxt3 (lastest version)
