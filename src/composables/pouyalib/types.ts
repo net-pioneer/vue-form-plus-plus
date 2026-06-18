@@ -14,3 +14,5 @@ export interface formError{
     fieldName?:string,
     text?:string
 }
+
+export type BackendOptions = { url: string; cache?: boolean };

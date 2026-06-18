@@ -1,7 +1,8 @@
 import { MIN, Group, Telephone, Required } from "@/composables/pouyalib/useDecoration";
 import type { PayloadInterface } from "@/composables/pouyalib/types";
+import { basePayload } from "@/composables/pouyalib/abstracts.ts";
 
-export class formPayload implements PayloadInterface{
+export class formPayload extends basePayload implements PayloadInterface{
     @Group(1)
     @Required
     @MIN(3)

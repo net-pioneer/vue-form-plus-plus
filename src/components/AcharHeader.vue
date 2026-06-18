@@ -1,6 +1,9 @@
 <template>
   <header>
     <div class="menu">
+      <router-link to="/backend-rule">
+        {{$t('header.backend_rule')}}
+      </router-link>
       <router-link to="/history">
         {{$t('header.show_addresses')}}
       </router-link>

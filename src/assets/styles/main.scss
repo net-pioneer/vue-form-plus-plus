@@ -39,6 +39,10 @@ body{
   box-sizing: border-box;
 }
 
+.col-3 {
+  flex: 0 0 25%;
+}
+
 .col-4 {
   flex: 0 0 33.33%;
 }
@@ -53,6 +57,9 @@ body{
 
 /* Tablet screens (min-width: 768px) */
 @media (max-width: 768px) {
+  .col-3 {
+    flex: 0 0 100%;
+  }
   .col-6 {
     flex: 0 0 100%;  /* 6 columns = 50% */
   }

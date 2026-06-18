@@ -54,7 +54,6 @@
 <script setup lang="ts">
 import ContentBox from "@/components/ContentBox.vue";
 import XText from "@/components/el/x-text.vue";
-import { formPayload } from "@/composables/payloads/AcharPayload";
 import { reactiveForm } from "@/composables/pouyalib/useDecoration";
 import useFormValidation from "@/composables/pouyalib/useFormValidation";
 import { reactive, ref, shallowRef } from "vue";
@@ -65,13 +64,13 @@ import SrvRequest from "@/composables/SrvRequest";
 import { useToast } from "vue-toast-notification";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
+import { formPayload } from "@/composables/payloads/StaticPayload.ts";
 //----------
 const enum formStep {
   info=1,map=2,done=3
 }
 const currentStep = shallowRef<formStep>(formStep.info);
 const payload = reactiveForm(formPayload);
-const FormValidation = useFormValidation(payload);
 const errors = ref<formError[]>([]);
 const loading = ref(false);
 const http = SrvRequest();
@@ -92,7 +91,7 @@ const onMapSeletectedError = ()=>{
 }
 const submit = async ()=>{
 
-  const gateCheck = FormValidation.checkValidations(currentStep.value);
+  const gateCheck = payload.validate(currentStep.value);
   console.log(gateCheck);
   if(gateCheck.len !== 0){
     errors.value = gateCheck;

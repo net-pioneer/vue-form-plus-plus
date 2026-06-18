@@ -10,6 +10,11 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/backend-rule",
+      name: "backendRule",
+      component: () => import("@/views/backendRules.vue"),
+    },
+    {
       path: "/history",
       name: "history",
       component: () => import("@/views/history.vue"),

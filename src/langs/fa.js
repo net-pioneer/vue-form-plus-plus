@@ -1,6 +1,7 @@
 export default {
     header:{
         show_addresses:'مشاهده آدرس ها',
+        backend_rule:'Backend Rule',
         submit_address:'ثبت آدرس'
     },
     content:{
